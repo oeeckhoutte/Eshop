@@ -1,0 +1,52 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+
+        <h1 class="header">Ajouter un produit</h1>
+        <div class="row">
+                {{ form_start(form) }}
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">visibility</i>
+                        {{ form_widget(form.name, {'attr': {'type': 'text'}}) }}
+                        <label for="icon_prefix2">Nom</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="material-icons prefix">euro_symbol</i>
+                        {{ form_widget(form.price, {'attr': {'type': 'text'}}) }}
+                        <label for="icon_prefix2">Prix</label>
+                    </div>
+
+                    <div class="input-field col s6">
+                        {{ form_widget(form.category) }}
+                        <label>Catégorie</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix">mode_edit</i>
+                        {{ form_widget(form.description, {'attr': {'class': 'materialize-textarea'}}) }}
+                        <label for="icon_prefix2">Description</label>
+                    </div>
+                </div>
+
+                {{ form_widget(form.save, {'attr': {'class': 'btn btn-block red col s12'}}) }}
+
+
+                {{ form_end(form) }}
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    </script>
+{% endblock javascripts %}

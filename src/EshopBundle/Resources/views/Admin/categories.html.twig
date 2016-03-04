@@ -1,0 +1,24 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+    {% for c in categories %}
+            <div class="col s4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{ asset('img/baguette.jpg') }}">
+                        <span class="card-title">{{ c.name }}</span>
+                    </div>
+                    <div class="card-content">
+                        <p>{{ c.description }}</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Gérer les produits</a>
+                    </div>
+                </div>
+            </div>
+    {% endfor %}
+    </div>
+</div>
+{% endblock body %}

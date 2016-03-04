@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+<div class="container">
+    <h2 class="header">Les produits</h2>
+    <ul class="collection">
+        {% for p in products %}
+            <a href="{{ path('eshop_product', { 'id': p.id } ) }}" class="collection-item avatar black-text">
+                <img src="{{ asset('img/baguette.jpg') }}" alt="" class="circle">
+                <span class="title">{{ p.name }}</span>
+                <p>{{ p.description }} <br>
+                    {{ p.price }}€
+                </p>
+                <div class="chip secondary-content amber accent-4">
+                    <img src="{{ asset('img/baguette.jpg') }}" alt="{{ p.category.name }}">
+                    {{ p.category.name }}
+                </div>
+            </a>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock body %}

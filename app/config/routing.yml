@@ -1,3 +1,5 @@
-app:
-    resource: "@AppBundle/Controller/"
+eshop:
+    resource: "@EshopBundle/Controller/"
     type:     annotation
+    prefix:   /
+
