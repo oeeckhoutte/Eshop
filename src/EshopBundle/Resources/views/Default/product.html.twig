@@ -10,13 +10,25 @@
                 <div class="card-content white-text">
                     <span class="card-title">Description</span>
                     <p>{{ product.description }}</p>
-                    <a class="btn disabled red black-text"><i class="material-icons left">euro_symbol</i>{{ product.price }}</a>
-                    <p class="right-align"><i class="material-icons tiny">local_shipping</i> + Frais de ports</p>
+                    <p class="right-align"> + Frais de ports</p>
                 </div>
                 <div class="card-action">
                     <a class="btn btn-block btn-large" href="#"><i class="material-icons left">add_shopping_cart</i>Ajouter au panier - {{ product.price }}€</a>
                 </div>
             </div>
         </div>
+        <h2 class="header">Informations</h2>
+        <table class="bordered highlight">
+            <tbody>
+            <tr>
+                <th data-field="id">Entreprise</th>
+                <td>Fruits & légumes</td>
+            </tr>
+            <tr>
+                <th>Avis clients</th>
+                <td><i class="material-icons amber-text large">star_rate</i></td>
+            </tr>
+            </tbody>
+        </table>
     </div>
 {% endblock body %}
