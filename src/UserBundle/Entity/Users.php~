@@ -23,4 +23,24 @@ class Users extends BaseUser
         parent::__construct();
         // your own logic
     }
+
+    /**
+     * @ORM\Column(type="string", name="firstName")
+     */
+    private $firstName;
+
+    /**
+     * @ORM\Column(type="string", name="lastName")
+     */
+    private $lastName;
+
+    /**
+     * @ORM\Column(type="text", name="adress")
+     */
+    private $adress;
+
+    /**
+     * @ORM\Column(type="date", name="birthday")
+     */
+    private $birthday;
 }
