@@ -130,4 +130,28 @@ class Product
     {
         return $this->price;
     }
+
+    /**
+     * Set category
+     *
+     * @param \EshopBundle\Entity\Category $category
+     *
+     * @return Product
+     */
+    public function setCategory(\EshopBundle\Entity\Category $category)
+    {
+        $this->category = $category;
+
+        return $this;
+    }
+
+    /**
+     * Get category
+     *
+     * @return \EshopBundle\Entity\Category
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
 }
